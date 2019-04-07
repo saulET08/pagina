@@ -194,3 +194,119 @@ footer p{
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
+
+/* Destinos */
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.parrallax{
+    background: #fff fixed no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#seccion1{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/islandia.jpg')
+
+}
+
+#info1{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.9);
+    -webkit-transition:opacity 0.3s;
+    opacity:0;
+}
+
+#seccion1:hover #info1{
+    opacity: 1;
+}
+
+#headline1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -70px;
+    -webkit-transition: margin 0.2s;
+    font-size: 21px;
+}
+
+#seccion1:hover #headline1{
+    margin-left: 70px;
+}
+
+#seccion2{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/colombia.jpg')
+}
+
+#info2{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.9);
+    -webkit-transition:opacity 0.3s;
+    opacity:0;
+}
+
+#seccion2:hover #info2{
+    opacity: 1;
+}
+
+#headline2{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -70px;
+    -webkit-transition: margin 0.2s;
+    font-size: 21px;
+}
+
+#seccion2:hover #headline2{
+    margin-left: 70px;
+}
+
+#seccion3{
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/china.jpg')
+}
+
+#info3{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.9);
+    -webkit-transition:opacity 0.3s;
+    opacity:0;
+}
+
+#seccion3:hover #info3{
+    opacity: 1;
+}
+
+#headline3{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -70px;
+    -webkit-transition: margin 0.2s;
+    font-size: 21px;
+}
+
+#seccion3:hover #headline3{
+    margin-left: 70px;
+}
