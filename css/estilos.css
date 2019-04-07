@@ -1,51 +1,59 @@
+/*cambiar el tamaño de la imagen del slider*/
 .bd-example, .d-block{
 	max-height: 600px;
 	width: auto;
 }
-#iconos{
-	display: flex;
-}
-#producto1{
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-}
-.mapa iframe{
-	width: 100%;
-	height: 600px;
-	align-items: center;
-}
 main {
-        column-count:3;
+      column-count:3;
 
-	    column-gap: 2em;
+      column-gap: 2em;
 
-	    column-width: 320px;
-
-	    column-rule: 1px solid #bbb;
+      column-width: 320px;
 }
-h3{
+.nav-link{
+  font-size: 20px;
+}
+/*cambiar de tamaño la letra de viajar a*/
+.form-control::placeholder{
+  font-size: 14px;
+}
+/*cambiar color de letra al slider*/
+.carousel-caption,h5,p{
+  color:black;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.destinos{
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #707579;
+  text-transform: capitalize;
+}
+/*icono de ubicacion destinos*/
+.destinos .fa-map-marker{
+  background: white;
+  color:#F8380F;
+  width: 50px;
+}
+.destino1{
+  text-align: center;
+}
+.destino2{
+  text-align: center;
+}
+.destino3{
+  text-align: center;
+}
+.texto{
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2{
   column-span: all;
+  text-align: center;
+  color: red;
 }
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-	
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-
 /* footer */
-body {
-        font-family: 'Signika', sans-serif;
-     }
      .bg-grey {
         background: #292929;
      }
@@ -73,7 +81,7 @@ footer h6:after {
     left: 0;
     bottom: -20px;
 }
-     .btn-footer {
+    .btn-footer {
                  color: grey;
               
                 text-decoration: none;
@@ -109,12 +117,6 @@ footer h6:after {
     border-radius: 0 16px 16px 0;
     padding: 2px 12px;
 }
-     /*.social .fa {
-    color: grey;
-    font-size: 22px;
-    padding: 10px 15px;
-    background: #3c3c3c;
-}*/
      footer ul li {
     list-style: none;
     display: block;
@@ -143,8 +145,6 @@ a:hover {
   text-decoration: none;
   margin: 5px 2px;
 }
-
-
 /* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
@@ -166,6 +166,31 @@ a:hover {
 }
 
 .fa-map-marker{
-    background: black;
-    color: white;   
+    background: white;
+    color: red;   
 }
+footer h6{
+  color:white;
+}
+footer p{
+  color:white;
+}
+.carousel-indicators .active {
+    background-color: #13A0EC;
+}
+.carousel-control-prev-icon .active{
+   background-color: #13A0EC;
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
