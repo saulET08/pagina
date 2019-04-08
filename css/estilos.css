@@ -310,3 +310,25 @@ section{
 #seccion3:hover #headline3{
     margin-left: 70px;
 }
+
+/* Paquetes */
+
+p {
+  color: white;
+}
+
+h5 {
+  color: white;
+}
+
+a {
+color: black;
+}
+
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #e1ea56;
+}
