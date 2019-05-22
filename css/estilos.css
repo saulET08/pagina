@@ -1,8 +1,13 @@
 /*cambiar el tamaño de la imagen del slider*/
 .bd-example, .d-block{
-	max-height: 600px;
-	width: auto;
+	max-height: 490px;
+	width: cover;
 }
+.navbar{
+  border-style: solid;
+  border-width: 1px;
+}
+/*Destacados*/
 main {
       column-count:3;
 
@@ -10,6 +15,7 @@ main {
 
       column-width: 320px;
 }
+/*tamaño de letra del menu */
 .nav-link{
   font-size: 20px;
 }
