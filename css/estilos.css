@@ -1,6 +1,6 @@
 /*cambiar el tamaño de la imagen del slider*/
 .bd-example, .d-block{
-	max-height: 490px;
+	max-height: 580px;
 	width: cover;
 }
 .navbar{
