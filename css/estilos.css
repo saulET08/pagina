@@ -9,11 +9,17 @@
 }
 /*Destacados*/
 main {
+      -webkit-column-count:3;
+      -moz-column-count:3;
       column-count:3;
 
-      column-gap: 2em;
+      -moz-column-rule: 1px solid #bbb;
+      -webkit-column-rule: 1px solid #bbb;
+      column-rule: 1px solid #bbb;
 
-      column-width: 320px;
+      -moz-column-width: 280px;         
+      -webkit-column-width: 280px;
+      column-width: 280px;
 }
 /*tamaño de letra del menu */
 .nav-link{
@@ -59,6 +65,53 @@ h1{
   text-align: center;
   color: black;
 }
+/*Para mobile */
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {
+main {
+      -webkit-column-count:3;
+      -moz-column-count:3;
+      column-count:3;
+
+      -moz-column-gap: 3em;
+      -webkit-column-gap: 3em;
+      column-gap: 3em;
+
+      -moz-column-rule: 1px solid #bbb;
+      -webkit-column-rule: 1px solid #bbb;
+      column-rule: 1px solid #bbb;
+
+      -moz-column-width: 500px;         
+      -webkit-column-width: 500px;
+      column-width: 500px;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  main {
+      -webkit-column-count:3;
+      -moz-column-count:3;
+      column-count:3;
+
+      -moz-column-gap: 10em;
+      -webkit-column-gap: 10em;
+      column-gap: 10em;
+
+      -moz-column-rule: 1px solid #bbb;
+      -webkit-column-rule: 1px solid #bbb;
+      column-rule: 1px solid #bbb;
+
+      -moz-column-width: 500px;         
+      -webkit-column-width: 500px;
+      column-width: 500px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
 /* footer */
      .bg-grey {
         background: #292929;
@@ -187,20 +240,6 @@ footer p{
 .carousel-control-prev-icon .active{
    background-color: #13A0EC;
 }
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
 /* Destinos */
 html, body{
     width: 100%;
