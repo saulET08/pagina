@@ -20,25 +20,30 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="paquetes.html">Paquetes</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Modificar
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="admin/index.php">Pagina Principal</a>
+          <a class="dropdown-item" href="#">Paquetes</a>
+          <a class="dropdown-item" href="#">Destinos</a>
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="destinos.html">Destinos</a>
+        <a class="nav-link" href="">Crear usuario</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="nav-link" href="">Modificar usuario</a>
       </li>
-      <div class="btn-group pull-right">
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="icon-user"></i> admin <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="icon-wrench"></i> Settings</a></li>
-                        <li class="divider"></li>
-                        <li><a href="logout.php"><i class="icon-share"></i> Logout</a></li>
-                    </ul>
-                </div>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?php echo $user->getNombre(); ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="logout.php">Salir</a>
+        </div>
+      </li>
   </ul>
   </div>
 </nav>

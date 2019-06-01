@@ -19,8 +19,8 @@ if(isset($_SESSION['user'])){
         include_once 'home.php';
     }else{
         //echo "No existe el usuario";
-        $errorLogin = "Nombre de usuario y/o password incorrecto";
-        include_once 'login.php';
+        $errorLogin = "Nombre de usuario y/o contraseña incorrectos";
+        include_once 'Formlogin.php';
     }
 }else{
     //echo "login";

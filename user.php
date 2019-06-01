@@ -16,7 +16,6 @@ class User extends DB{
         $query->execute(['user' => $user]);
         
         foreach ($query as $currentUser) {
-            
             $this->username = $currentUser['username'];
         }
     }

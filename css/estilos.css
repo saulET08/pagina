@@ -241,9 +241,9 @@ footer p{
   color:white;
 }
 .carousel-indicators .active {
-    background-color: #13A0EC;
+    background-color: black;
 }
-.carousel-control-prev-icon .active{
+.carousel-control-prev-icon .{
    background-color: #13A0EC;
 }
 /* Destinos */
