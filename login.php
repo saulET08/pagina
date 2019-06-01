@@ -24,6 +24,6 @@ if(isset($_SESSION['user'])){
     }
 }else{
     //echo "login";
-    include_once 'login.php';
+    include_once 'Formlogin.php';
 }
 ?>
