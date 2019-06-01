@@ -19,6 +19,11 @@
 </head>
 <body>
 <form method="POST">
+    <?php
+            if(isset($errorLogin)){
+                echo $errorLogin;
+            }
+    ?>
 <div id="login">
     <h3 class="text-center text-white pt-5">Administador</h3>
     <div class="container">
@@ -33,7 +38,10 @@
                         </div>
                         <div class="form-group">
                             <label for="password" class="text-info">Contraseña:</label><br>
-                            <input type="text" name="password" id="password" name="pss" class="form-control">
+                            <input type="password" name="password" id="password" name="pss" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <p class="center"><input type="submit" name="submit" class="btn btn-info btn-md" value="Iniciar sesion"></p>
                         </div>
                     </form>
                 </div>

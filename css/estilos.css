@@ -47,6 +47,11 @@ main {
   color:#F8380F;
   width: 50px;
 }
+/* destinos mas destacados*/
+.DestinosD{
+  color: #00b300;
+  font-weight: 700;
+}
 .destino1{
   text-align: center;
 }
@@ -57,7 +62,7 @@ main {
   text-align: center;
 }
 .texto{
-  font-size: 14px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
 h1{
@@ -112,6 +117,7 @@ main {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
+/* descatados*/
 /* footer */
      .bg-grey {
         background: #292929;
