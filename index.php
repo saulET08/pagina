@@ -124,17 +124,52 @@
             }
         }
         ?>">
-      <h6 class="mt-1"><span class="fa fa-map-marker"></span>Mazatlan, Sinaloa.</h6>
+      <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where numero='1' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode($row3['lugar']);
+            }
+        }
+        ?></h6>
       <p class="texto">Viaja a Mazatlan</p>
     </div>
     <div class=destino2>
-      <img src="img/sayind.jpg">
-      <h6 class="mt-1"><span class="fa fa-map-marker"></span>Sayulita, Nayarit.</h6>
+      <img src="<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where numero='2' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode($row3['ruta']);
+            }
+        }
+        ?>">
+      <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where numero='2' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode($row3['lugar']);
+            }
+        }
+        ?></h6>
       <p class="texto">Viaja a Sayulita</p>
     </div>
     <div class=destino3>
-      <img src="img/mexind.jpg">
-      <h6 class="mt-1"><span class="fa fa-map-marker"></span>Mexiquillo, Durango.</h6>
+      <img src="<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where numero='3' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode($row3['ruta']);
+            }
+        }
+        ?>">
+      <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where numero='3' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode($row3['lugar']);
+            }
+        }
+        ?></h6>
       <p class="texto">Viaja a Mexiquillo</p>
     </div>
   </section>
