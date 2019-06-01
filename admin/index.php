@@ -31,7 +31,7 @@
           Modificar
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="admin/index.php">Pagina Principal</a>
+          <a class="dropdown-item" href="index.php">Pagina Principal</a>
           <a class="dropdown-item" href="#">Paquetes</a>
           <a class="dropdown-item" href="#">Destinos</a>
         </div>
@@ -220,7 +220,7 @@
                 <td>".utf8_encode($row3['ruta'])."</td>
                 <td>".utf8_encode($row3['lugar'])."</td>
     
-                <td><a href='editSliderForm.php?id=".$row3['idDestacado']."'><span class='fas fa-edit'> Editar</span></a></td>
+                <td><a href='editDestacadosForm.php?id=".$row3['idDestacado']."'><span class='fas fa-edit'> Editar</span></a></td>
                 <td><a href='delUser.php?id=".$row3['idDestacado']."'><span class='fas fa-trash-alt'> Eliminar</span></a></td>
               </tr>";
             }
@@ -229,5 +229,4 @@
       ?>
     </tbody>
   </table>
-
 </html>

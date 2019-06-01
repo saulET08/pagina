@@ -16,7 +16,8 @@ if(isset($_SESSION['user'])){
         //echo "Existe el usuario";
         $userSession->setCurrentUser($userForm);
         $user->setUser($userForm);
-        include_once 'home.php';
+        header("Location:admin/index.php");
+        include_once 'admin/index.php';
     }else{
         //echo "No existe el usuario";
         $errorLogin = "Nombre de usuario y/o contraseña incorrectos";
