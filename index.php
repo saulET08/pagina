@@ -23,8 +23,8 @@
 	<!-- *********** -->
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-  <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-grey fixed-top">
+  <a class="navbar-brand" href="index.php"><img src="img/logo.png" width="100" height="100"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -40,10 +40,6 @@
         <a class="nav-link" href="contacto.html">Contacto</a>
       </li>
   </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Viajar a..." aria-label="Search">
-      <button type="button" class="btn btn-outline-warning">Buscar</button>
-    </form>
   </div>
 </nav>
 </header>
@@ -176,7 +172,7 @@
          <div class="row">
             <div class="col-md-6 ">
                <div class="logo-part">
-                  <img src="img/logo.png">
+                  <img src="img/logo.png" width="200" height="200">
                   <br>
                   <br>
                   <p>Av Sahuatoba 103b, Bella Vista, 34047 Durango, Dgo.</p>
