@@ -19,7 +19,6 @@
 </head>
 <body>
 <form method="POST">
-    
 <div id="login">
     <h3 class="text-center text-white pt-2">Administador</h3>
     <div class="container">

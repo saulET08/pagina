@@ -23,8 +23,8 @@
 	<!-- *********** -->
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-grey fixed-top">
-  <a class="navbar-brand" href="index.php"><img src="img/logo.png" width="100" height="100"></a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-fixed-top">
+  <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -172,7 +172,7 @@
          <div class="row">
             <div class="col-md-6 ">
                <div class="logo-part">
-                  <img src="img/logo.png" width="200" height="200">
+                  <img class="logo2" src="img/logo.png" width="200" height="200">
                   <br>
                   <br>
                   <p>Av Sahuatoba 103b, Bella Vista, 34047 Durango, Dgo.</p>

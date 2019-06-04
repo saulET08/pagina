@@ -27,8 +27,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-  <a class="navbar-brand" href="index.html"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+  <a class="navbar-brand" href="index.html"><img class="logo" src="../img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -45,24 +45,14 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Crear usuario</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="">Modificar usuario</a>
-      </li>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Bienvenido 
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../logout.php">Salir</a>
-        </div>
+        <a class="nav-link" href="../logout.php">Salir</a>
       </li>
   </ul>
   </div>
 </nav>
 </header>
 <body>
+<div><br/><h1 class="DestinosD">Carousel de imagenes</h1><br></div>
 <div class="container">
   <div class="row">
     <div class="container">
@@ -94,7 +84,7 @@
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar imagen</button>
               </form>
               </div>
             </div>
@@ -125,7 +115,7 @@
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar imagen</button>
               </form>
               </div>
             </div>
@@ -157,7 +147,7 @@
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar imagen</button>
               </form>
               </div>
             </div>
@@ -211,7 +201,7 @@
                    <h5 class="card-title">Lugar</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar datos</button>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
               </form>
               </div>
             </div>
@@ -254,7 +244,7 @@
                    <h5 class="card-title">Lugar</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
               </form>
               </div>
             </div>
@@ -298,7 +288,7 @@
                    <h5 class="card-title">Lugar</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
               </form>
               </div>
             </div>
@@ -307,4 +297,5 @@
 </div>
   </div>
 </div>
+</body>
 </html>
