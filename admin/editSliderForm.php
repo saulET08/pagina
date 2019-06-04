@@ -35,7 +35,7 @@
       <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
       <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
     </div>
-    <button id="boton" type="submit" class="btn btn-primary">Subir</button>
+    <button id="boton" type="submit" class="btn btn-primary" href='editSliderForm.php?id=".$row3[idSlider]."'>Subir</button>
   </form>
 </div>
 </div>

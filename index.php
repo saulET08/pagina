@@ -7,9 +7,10 @@
 	<meta charset="utf-8">
   <link rel="icon" type="image/jpg" href="img/logo.png">
 	<!-- Diseño responsivo-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width"/>
 	<title>RocaTours</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/mobile.css">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css bootstrap/bootstrap.min.css">
 	<!-- Bootstrap JS,JQuery y Ajax-->
@@ -48,7 +49,6 @@
 </header>
 <body>
 <!--slider-->
-<section id="slider">
 		<div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -59,7 +59,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM slider where numero='1' "); 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='1' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['ruta']);
@@ -67,13 +67,11 @@
         }
         ?>" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5></h5>
-          <p></p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM slider where numero='2' "); 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='2' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['ruta']);
@@ -81,13 +79,11 @@
         }
         ?>" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5></h5>
-          <p></p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM slider where numero='3 ' "); 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='3 ' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['ruta']);
@@ -95,8 +91,6 @@
         }
         ?>" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5></h5>
-          <p></p>
         </div>
       </div>
     </div>
@@ -110,14 +104,13 @@
     </a>
   </div>
 </div>
-</section>
 <div><h1 class="DestinosD">Destinos mas destacados</h1><br></div>
 
 <main>
   <section class="destinos">
     <div class=destino1>
       <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='1' "); 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['ruta']);
@@ -125,7 +118,7 @@
         }
         ?>">
       <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='1' "); 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['lugar']);
@@ -136,7 +129,7 @@
     </div>
     <div class=destino2>
       <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='2' "); 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['ruta']);
@@ -144,7 +137,7 @@
         }
         ?>">
       <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='2' "); 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['lugar']);
@@ -155,7 +148,7 @@
     </div>
     <div class=destino3>
       <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='3' "); 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['ruta']);
@@ -163,7 +156,7 @@
         }
         ?>">
       <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='3' "); 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode($row3['lugar']);

@@ -1,5 +1,11 @@
 <?php
  include('conexion.php');
+        $result3 = $enlace->query("SELECT * FROM slider");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+              
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +13,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <!--<link rel="stylesheet" href="../css/estilos.css">-->
+    <link rel="stylesheet" href="../css/panel.css">
     <link rel="stylesheet" href="../css bootstrap/bootstrap.min.css">
+
     <!-- Bootstrap JS,JQuery y Ajax-->
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
@@ -55,179 +63,248 @@
 </nav>
 </header>
 <body>
-<div class="bd-example">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM slider where numero='1' "); 
+<div class="container">
+  <div class="row">
+    <div class="container">
+  <div class="row">
+    
+        <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=<?php 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='1' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo "editSlider.php?id=".$row3['idSlider']."";
+            }
+        }
+        ?>>
+              <img class="card-img-top" src="<?php 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='1' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo "../".utf8_encode($row3['ruta']);
             }
         }
-        ?>" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        ?>" alt="Carousel 1">
+              <div class="card-body mb">
+                <h5 class="card-title">Imagen 1</h5>
+                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+              </form>
+              </div>
+            </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM slider where numero='2' "); 
+       
+        <div class="col-md-4">
+        <div class="card mb">
+           <form enctype="multipart/form-data" method="POST" action=<?php 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='2' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo "editSlider.php?id=".$row3['idSlider']."";
+            }
+        }
+        ?>>
+              <img class="card-img-top" src="<?php 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='2' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo "../".utf8_encode($row3['ruta']);
             }
         }
-        ?>" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        ?>" alt="Carousel 3">
+              <div class="card-body mb">
+                <h5 class="card-title">Imagen 2</h5>
+                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+              </form>
+              </div>
+            </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM slider where numero='3' "); 
+        
+        <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=<?php 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='3' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo "editSlider.php?id=".$row3['idSlider']."";
+            }
+        }
+        ?>>
+              <img class="card-img-top" src="<?php 
+        $result3 = $enlace->query("SELECT * FROM slider where idSlider='3' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo "../".utf8_encode($row3['ruta']);
             }
         }
-        ?>" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
+        ?>" alt="Carousel 3">
+              <div class="card-body mb">
+                <h5 class="card-title">Imagen 3</h5>
+                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+              </form>
+              </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-</div>  
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Numero de orden imagenes</th>
-        <th scope="col">Ruta</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Borrar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-        include('conexion.php');
-        $result3 = $enlace->query("SELECT * FROM slider");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "<tr>
-                <td>".utf8_encode($row3['numero'])."</td>
-                <td>".utf8_encode($row3['ruta'])."</td>
-    
-                <td><a href='editSliderForm.php?id=".$row3['idSlider']."'><span class='fas fa-edit'> Editar</span></a></td>
-                <td><a href='delUser.php?id=".$row3['idSlider']."'><span class='fas fa-trash-alt'> Eliminar</span></a></td>
-              </tr>";
-            }
-        }
-      ?>
-    </tbody>
-  </table>
-<div><h1 class="DestinosD">Destinos mas destacados</h1><br></div>
+</div>
+  </div>
+</div>
 
-<main>
-  <section class="destinos">
-    <div class=destino1>
-      <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='1' "); 
+<div><br/><h1 class="DestinosD">Destinos mas destacados</h1><br></div>
+
+<div class="container">
+  <div class="row">
+    <div class="container">
+  <div class="row">
+        <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo "editDestacados.php?id=".$row3['idDestacado']."";
+            }
+        }
+        ?>>
+              <img class="card-img-top" src="<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo "../".utf8_encode($row3['ruta']);
             }
         }
-        ?>">
-      <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='1' "); 
+        ?>" alt="Carousel 1">
+        <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
+                $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
+                 if ($result3->num_rows > 0) {
+                 while($row3 = $result3->fetch_assoc()) {
+                 echo utf8_encode($row3['lugar']);
+                 }
+                  }
+                  ?></h6>
+              <div class="card-body mb">
+                <h5 class="card-title">Imagen 1</h5>
+                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Lugar</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar datos</button>
+              </form>
+              </div>
+            </div>
+        </div>
+       
+        <div class="col-md-4">
+        <div class="card mb">
+           <form enctype="multipart/form-data" method="POST" action=<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode($row3['lugar']);
+            echo "editDestacados.php?id=".$row3['idDestacado']."";
             }
         }
-        ?></h6>
-      <p class="texto">Viaja a Mazatlan</p>
-    </div>
-    <div class=destino2>
-      <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='2' "); 
+        ?>>
+              <img class="card-img-top" src="<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo "../".utf8_encode($row3['ruta']);
             }
         }
-        ?>">
-      <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='2' "); 
+        ?>" alt="Carousel 3">
+        <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
+                $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
+                 if ($result3->num_rows > 0) {
+                 while($row3 = $result3->fetch_assoc()) {
+                 echo utf8_encode($row3['lugar']);
+                 }
+                  }
+                  ?></h6>
+              <div class="card-body mb">
+                <h5 class="card-title">Imagen 2</h5>
+                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Lugar</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+              </form>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode($row3['lugar']);
+            echo "editDestacados.php?id=".$row3['idDestacado']."";
             }
         }
-        ?></h6>
-      <p class="texto">Viaja a Sayulita</p>
-    </div>
-    <div class=destino3>
-      <img src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='3' "); 
+        ?>>
+              <img class="card-img-top" src="<?php 
+        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo "../".utf8_encode($row3['ruta']);
             }
         }
-        ?>">
-      <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where numero='3' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode($row3['lugar']);
-            }
-        }
-        ?></h6>
-      <p class="texto">Viaja a Mexiquillo</p>
-    </div>
-  </section>
- </main>
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Numero de orden imagenes</th>
-        <th scope="col">Ruta</th>
-        <th scope="col">Lugar</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Borrar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-        include('conexion.php');
-        $result3 = $enlace->query("SELECT * FROM destacados");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "<tr>
-                <td>".utf8_encode($row3['numero'])."</td>
-                <td>".utf8_encode($row3['ruta'])."</td>
-                <td>".utf8_encode($row3['lugar'])."</td>
-    
-                <td><a href='editDestacadosForm.php?id=".$row3['idDestacado']."'><span class='fas fa-edit'> Editar</span></a></td>
-                <td><a href='delUser.php?id=".$row3['idDestacado']."'><span class='fas fa-trash-alt'> Eliminar</span></a></td>
-              </tr>";
-            }
-        }
-        $enlace->close();
-      ?>
-    </tbody>
-  </table>
+        ?>" alt="Carousel 3">
+        <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
+                $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
+                 if ($result3->num_rows > 0) {
+                 while($row3 = $result3->fetch_assoc()) {
+                 echo utf8_encode($row3['lugar']);
+                 }
+                  }
+                  ?></h6>
+              <div class="card-body mb">
+                <h5 class="card-title">Imagen 3</h5>
+                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Lugar</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a>Cambiar imagen</button>
+              </form>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+  </div>
+</div>
 </html>
