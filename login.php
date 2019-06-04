@@ -6,7 +6,7 @@ $user = new User();
 if(isset($_SESSION['user'])){
     //echo "hay sesion";
     $user->setUser($userSession->getCurrentUser());
-    include_once 'home.php';
+    header("Location:admin/index.php");
 }else if(isset($_POST['username']) && isset($_POST['password'])){
     
     $userForm = $_POST['username'];

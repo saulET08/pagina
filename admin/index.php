@@ -28,7 +28,7 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-  <a class="navbar-brand" href="index.html"><img class="logo" src="../img/logo.png"></a>
+  <a class="navbar-brand" href="index.php"><img class="logo" src="../img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -45,7 +45,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../logout.php">Salir</a>
+        <a class="nav-link" href="../logout.php"><span class="fas fa-sign-out-alt"></span> Salir</a>
       </li>
   </ul>
   </div>
