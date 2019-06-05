@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
   <a class="navbar-brand" href="index.php"><img class="logo" src="../img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="index.php">Pagina Principal</a>
-          <a class="dropdown-item" href="#">Paquetes</a>
+          <a class="dropdown-item" href="paquetes.php">Paquetes</a>
           <a class="dropdown-item" href="#">Destinos</a>
         </div>
       </li>
@@ -78,7 +78,7 @@
         ?>" alt="Carousel 1">
               <div class="card-body mb">
                 <h5 class="card-title">Imagen 1</h5>
-                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
@@ -110,7 +110,7 @@
         ?>" alt="Carousel 3">
               <div class="card-body mb">
                 <h5 class="card-title">Imagen 2</h5>
-                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
@@ -141,7 +141,7 @@
         ?>" alt="Carousel 3">
               <div class="card-body mb">
                 <h5 class="card-title">Imagen 3</h5>
-                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
@@ -191,8 +191,7 @@
                   ?></h6>
               <div class="card-body mb">
                 <h5 class="card-title">Imagen 1</h5>
-                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
-                
+                <p class="card-text">Tamaño recomendado:400x250 pixeles</p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
@@ -235,7 +234,7 @@
                   ?></h6>
               <div class="card-body mb">
                 <h5 class="card-title">Imagen 2</h5>
-                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                <p class="card-text">Poner una imagen de 400x250 pixeles</p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
@@ -278,7 +277,7 @@
                   ?></h6>
               <div class="card-body mb">
                 <h5 class="card-title">Imagen 3</h5>
-                <p class="card-text">Poner una imagen de 1280x800 pixeles</p>
+                <p class="card-text">Poner una imagen de 400x250 pixeles</p>
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
