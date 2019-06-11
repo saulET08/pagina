@@ -23,7 +23,7 @@
   <!-- *********** -->
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-grey nva-fixed-top">
   <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,6 @@
 </header>
 <body>
 <!--slider-->
-    <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <?php
@@ -76,8 +75,6 @@
             }
         }
       ?>
-        </div>
-      </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -88,7 +85,6 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
 <div><h1 class="DestinosD">Destinos mas destacados</h1><br></div>
 
 <main>
