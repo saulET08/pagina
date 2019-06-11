@@ -1,3 +1,6 @@
+<?php
+ include('admin/conexion.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,8 +45,28 @@
 <body>
 <!--contenido-->
 <div><h1>Paquetes de Promoción</h1></div>
-
 <div class="card-columns">
+<?php
+       $result3 = $enlace->query("SELECT * FROM paquetes limit 3 ");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode ('<div class="card bg-dark text-white">
+                  <img src="'.$row3['ruta'].'" class="card-img" alt="...">
+                  <div class="card-img-overlay">
+                  <h5 class="card-title">'.$row3['lugar'].'</h5>
+                  <p class="card-text">'.$row3['fecha'].'</p>
+                  <p>'.$row3['descripcion'].'</p>
+                  <p class="card-text">'.$row3['dias'].'</p>
+                  <p>
+                  <a href="'.$row3['url'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
+                  </p>
+                  </div>
+                  </div>');
+          }
+        }
+?>
+<!--
+
   <div class="card bg-dark text-white">
   <img src="img/maz.jpg" class="card-img" alt="...">
   <div class="card-img-overlay">
@@ -51,12 +74,8 @@
     <p class="card-text">Viaja con nosotros este 10 de Abril.</p>
     <p>Todo incluido.</p>
     <p class="card-text">3 noches y 2 dias</p>
-    <!--<a href="#" class="btn btn-default btn-lg active" role="button">Enlace</a>
-    <a href="#" class="btn btn-primary btn-lg active" role="button">Enlace principal</a>-->
     <p>
       <a href="maz.html" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-
-
     </p>
   </div>
   </div>
@@ -86,7 +105,7 @@
     </p>
   </div>
   </div>
-
+-->
   <div class="card border-warning mb-3 text-white text-center p-3">
     <blockquote class="blockquote mb-0">
       <p style="color:black";>Puedes armar tu paquete como tu gustes.</p>
@@ -94,7 +113,26 @@
       <p style="color:black";>¡Como tu lo desees!</p>
     </blockquote>
   </div>
-
+<?php
+       $result3 = $enlace->query("SELECT * FROM paquetes limit 3,18446744073709551615");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode ('<div class="card bg-dark text-white">
+                  <img src="'.$row3['ruta'].'" class="card-img" alt="...">
+                  <div class="card-img-overlay">
+                  <h5 class="card-title">'.$row3['lugar'].'</h5>
+                  <p class="card-text">'.$row3['fecha'].'</p>
+                  <p>'.$row3['descripcion'].'</p>
+                  <p class="card-text">'.$row3['dias'].'</p>
+                  <p>
+                  <a href="maz.html" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
+                  </p>
+                  </div>
+                  </div>');
+          }
+        }
+?>
+<!--
   <div class="card bg-dark text-white text-right">
   <img src="img/guanajuato.jpg" class="card-img" alt="...">
   <div class="card-img-overlay">
@@ -121,9 +159,8 @@
   </div>
   </div>
   
-
+-->
 </div>
-
 
 
 <footer class="container-fluid bg-grey py-5">

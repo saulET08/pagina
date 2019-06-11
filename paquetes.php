@@ -1,3 +1,6 @@
+<?php
+ include('admin/conexion.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +45,6 @@
 <body>
 <!--contenido-->
 <div><h1>Paquetes de Promoción</h1></div>
-
 <div class="card-columns">
   <div class="card bg-dark text-white">
   <img src="img/maz.jpg" class="card-img" alt="...">
@@ -51,12 +53,8 @@
     <p class="card-text">Viaja con nosotros este 10 de Abril.</p>
     <p>Todo incluido.</p>
     <p class="card-text">3 noches y 2 dias</p>
-    <!--<a href="#" class="btn btn-default btn-lg active" role="button">Enlace</a>
-    <a href="#" class="btn btn-primary btn-lg active" role="button">Enlace principal</a>-->
     <p>
       <a href="maz.html" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-
-
     </p>
   </div>
   </div>
@@ -121,9 +119,7 @@
   </div>
   </div>
   
-
 </div>
-
 
 
 <footer class="container-fluid bg-grey py-5">
