@@ -78,6 +78,7 @@
               </div>
             </div>
             <br>
+            <br>
         </div>');
           ++$cont;
           }
@@ -87,13 +88,12 @@
 </div>
 </div>
 
-<br>
 <div class="container">
   <div class="row">
  <div class="col-md-4">
         <div class="card mb">
           <form enctype="multipart/form-data" method="POST" action=createSlider.php>
-          <img class="card-img-top" src="http://www.placehold.it/286x180" alt="Carousel 1">
+          <img class="card-img-top" src="http://www.placehold.it/1366x500" alt="Carousel 1">
             <div class="card-body mb">
                 <h5 class="card-title">Agregar Nueva Imagen</h5>
                 <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
@@ -114,123 +114,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="container">
-  <div class="row">
-        <div class="col-md-4">
+    <?php
+      $cont = 1;
+      $result3 = $enlace->query("SELECT * FROM destacados ");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode('<div class="col-md-4">
         <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "editDestacados.php?id=".$row3['idDestacado']."";
-            }
-        }
-        ?>>
-              <img class="card-img-top" src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "../".utf8_encode($row3['ruta']);
-            }
-        }
-        ?>" alt="Carousel 1">
-        <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-                $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='1' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['lugar']);
-                 }
-                  }
-                  ?></h6>
-              <div class="card-body mb">
-                <h5 class="card-title">Imagen 1</h5>
+          <form enctype="multipart/form-data" method="POST" action=editDestacados.php?id='.$row3['idDestacado'].'>
+          <img class="card-img-top" src="');echo  "../".($row3['ruta'].'" alt="Carousel 1">
+          <h6 class="mt-1"><span class="fa fa-map-marker"></span>'.$row3['lugar'].'</h6>
+            <div class="card-body mb">
+                <h5 class="card-title">Imagen '.$cont.'</h5>
                 <p class="card-text">Tamaño recomendado:400x250 pixeles</p>
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
-                   </div>
-                   <div class="form-group">
-                   <h5 class="card-title">Lugar</h5>
-                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
-                   </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
-              </form>
-              </div>
-            </div>
-        </div>
-       
-        <div class="col-md-4">
-        <div class="card mb">
-           <form enctype="multipart/form-data" method="POST" action=<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "editDestacados.php?id=".$row3['idDestacado']."";
-            }
-        }
-        ?>>
-              <img class="card-img-top" src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "../".utf8_encode($row3['ruta']);
-            }
-        }
-        ?>" alt="Carousel 3">
-        <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-                $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='2' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['lugar']);
-                 }
-                  }
-                  ?></h6>
-              <div class="card-body mb">
-                <h5 class="card-title">Imagen 2</h5>
-                <p class="card-text">Poner una imagen de 400x250 pixeles</p>
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
-                   </div>
-                   <div class="form-group">
-                   <h5 class="card-title">Lugar</h5>
-                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
-                   </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
-              </form>
-              </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4">
-        <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "editDestacados.php?id=".$row3['idDestacado']."";
-            }
-        }
-        ?>>
-              <img class="card-img-top" src="<?php 
-        $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "../".utf8_encode($row3['ruta']);
-            }
-        }
-        ?>" alt="Carousel 3">
-        <h6 class="mt-1"><span class="fa fa-map-marker"></span><?php 
-                $result3 = $enlace->query("SELECT * FROM destacados where idDestacado='3' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['lugar']);
-                 }
-                  }
-                  ?></h6>
-              <div class="card-body mb">
-                <h5 class="card-title">Imagen 3</h5>
-                <p class="card-text">Poner una imagen de 400x250 pixeles</p>
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
@@ -240,13 +136,42 @@
                    <h5 class="card-title">Lugar</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar datos</button>
+                <button type="submit" class="btn btn-danger mb" formaction="deleteDestacados.php?id='.$row3['idDestacado'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
+              </form>
+              </div>
+            </div>
+            <br/>
+            <br/>
+        </div>');
+          ++$cont;
+          }
+        }
+        ?>
+         </div>
+      </div>
+<div class="container">
+  <div class="row">
+ <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=createDestacado.php>
+          <img class="card-img-top" src="http://www.placehold.it/400x250" alt="Carousel 1">
+            <div class="card-body mb">
+                <h5 class="card-title">Agregar Destino Destacado</h5>
+                <p class="card-text">Tamaño recomendado:400x250 pixeles</p>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Lugar</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
               </form>
               </div>
             </div>
         </div>
-  </div>
-</div>
   </div>
 </div>
 </body>

@@ -1,10 +1,9 @@
 <?php
 	include('conexion.php');
 
-	$id=$_GET['id'];
-	$lugar= ($_POST['lugar']);
 	$img= $_FILES['img']['name'];
-	$result3 = $enlace->query("UPDATE destacados SET lugar='$lugar', ruta='img/".$img."' WHERE idDestacado=$id");
+	$lugar= ($_POST['lugar']);
+	$result3 = $enlace->query("INSERT INTO destacados (ruta,lugar) values ('img/".$img."','$lugar')");
 	
 	if ($result3) {
 	   include 'uploader.php';

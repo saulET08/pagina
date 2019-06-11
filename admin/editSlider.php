@@ -7,7 +7,7 @@
 	
 	if ($result3) {
 	   include 'uploader.php';
-	   header("Location:index.php?modificado=si");
+	   header("Location:index.php");
 	}else{
 		echo "no actualizó nada";
 	}

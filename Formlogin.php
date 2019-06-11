@@ -6,9 +6,9 @@
     <!-- Diseño responsivo-->
     <meta viewport="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Iniciar Sesion</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css bootstrap/bootstrap.min.css">
     <!-- Bootstrap JS,JQuery y Ajax-->
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -54,20 +54,21 @@
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode('<li data-target="#carouselExampleCaptions" data-slide-to="'.$cont);
-            if($row3['idSlider']==1){echo (' class="active"></li>');}else {echo ('"></li>');}
+            if($cont==0){echo (' class="active"></li>');}else {echo ('"></li>');}
             ++$cont;
           }
         }
         ?>
     </ol>
-
     <div class="carousel-inner">
       <?php
        $result3 = $enlace->query("SELECT * FROM slider ");
+       $firts = $enlace->query("SELECT *FROM slider limit 1");
+       $primera = $firts->fetch_assoc();
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode('<div class="carousel-item');
-            if($row3['idSlider']==1){echo (' active">');}else {echo ('">');}
+            if($row3['idSlider']==$primera['idSlider']){echo (' active">');}else {echo ('">');}
             echo ('<img src="'.$row3['ruta'].'" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
             </div>
@@ -92,19 +93,23 @@
 
 <main>
   <section class="destinos">
-      <?php
-      $result3 = $enlace->query("SELECT * FROM destacados ");
+  <div class="container">
+  <div class="row">
+        <?php
+         $result3 = $enlace->query("SELECT * FROM destacados ");
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode('<div class=destino1> <img src="'.$row3['ruta'].'">
-            <h6 class="mt-1"><span class="fa fa-map-marker"></span>');
-            echo utf8_encode($row3['lugar']."</h6>
-              </div>
-              </div>");
-          }
+        echo utf8_encode('<div class="col-md-4">
+        <div class="card mb">
+          <img class="card-img-top" src="');echo  "".($row3['ruta'].'" alt="Carousel 1">
+          <h6 class="mt-1"><span class="fa fa-map-marker"></span>'.$row3['lugar'].'</h6>
+          </div>
+          </div>');
         }
-        ?>
-    
+      }
+          ?>
+          </div>
+          </div>
   </section>
 
 </main>
@@ -127,7 +132,6 @@
             <div class="col-md-6 px-4">
                <h6> Acerca de Nosotros</h6>
                <p>Conoce nuestra empresa y nuestra historia.</p>
-               <a href="#" class="btn-footer"> Más información </a><br>
                <a href="contacto.html" class="btn-footer"> Contactanos</a>
             </div>
          </div>
@@ -151,8 +155,6 @@
                <h6> Redes sociales</h6>
                <div class="social">
                   <a href="https://www.facebook.com/ROCATOURS1/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a>
                   <a href="https://www.google.com/maps/uv?hl=es-419&pb=!1s0x869bc9542fa1c6cf:0xfa81a172c4715ac!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4s/maps/place/roca%2Btours%2Bmaps/@24.0304996,-104.6866561,3a,75y,285.69h,90t/data%3D*213m4*211e1*213m2*211smtQcI9aPoxVrfKv1QoXf4g*212e0*214m2*213m1*211s0x869bc9542fa1c6cf:0xfa81a172c4715ac?sa%3DX!5sroca+tours+maps+-+Buscar+con+Google&imagekey=!1e2!2smtQcI9aPoxVrfKv1QoXf4g&sa=X&ved=2ahUKEwj3lpaFqLDhAhUNna0KHfZECYgQpx8wD3oECAwQBg"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
                </div>
                <!--<p>That's technology limitation of LCD monitors</p>-->
