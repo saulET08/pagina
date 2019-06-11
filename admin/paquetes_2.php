@@ -1,11 +1,5 @@
 <?php
  include('conexion.php');
-        $result3 = $enlace->query("SELECT * FROM slider");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-              
-            }
-        }
 ?>
 <!DOCTYPE html>
 <html lang="en">

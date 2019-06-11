@@ -46,76 +46,18 @@
 </nav>
 </header>
 <body>
-<div><br/><h1 class="DestinosD">Carousel de imagenes</h1><br></div>
-<div class="container">
-  <div class="row">
-    <?php
-      $cont = 1;
-      $result3 = $enlace->query("SELECT * FROM slider ");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode('<div class="col-md-4">
-        <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=editSlider.php?id='.$row3['idSlider'].'>
-          <img class="card-img-top" src="');echo  "../".($row3['ruta'].'" alt="Carousel 1">
-            <div class="card-body mb">
-                <h5 class="card-title">Imagen '.$cont.'</h5>
-                <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
-                
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
-                   </div>
-                <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar imagen</button>
-                <button type="submit" class="btn btn-danger mb" formaction="deleteSlider.php?id='.$row3['idSlider'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
-              </form>
-              </div>
-            </div>
-            <br>
-            <br>
-        </div>');
-          ++$cont;
-          }
-        }
-        ?>
-       
-</div>
-</div>
-
-<div class="container">
-  <div class="row">
- <div class="col-md-4">
-        <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=createSlider.php>
-          <img class="card-img-top" src="http://www.placehold.it/1366x500" alt="Carousel 1">
-            <div class="card-body mb">
-                <h5 class="card-title">Agregar Nueva Imagen</h5>
-                <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
-                
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
-                   </div>
-                <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
-              </form>
-              </div>
-            </div>
-        </div>
-  </div>
-</div>
-
-<div><br/><h1 class="DestinosD">Destinos mas destacados</h1><br></div>
+<div><br/><h1 class="DestinosD">Destinos</h1><br></div>
 
 <div class="container">
   <div class="row">
     <?php
       $cont = 1;
-      $result3 = $enlace->query("SELECT * FROM destacados ");
+      $result3 = $enlace->query("SELECT * FROM destinos ");
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode('<div class="col-md-4">
         <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=editDestacados.php?id='.$row3['idDestacado'].'>
+          <form enctype="multipart/form-data" method="POST" action=editDestacados.php?id='.$row3['idDestino'].'>
           <img class="card-img-top" src="');echo  "../".($row3['ruta'].'" alt="Carousel 1">
           <h6 class="mt-1"><span class="fa fa-map-marker"></span>'.$row3['lugar'].'</h6>
             <div class="card-body mb">
@@ -131,7 +73,7 @@
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar datos</button>
-                <button type="submit" class="btn btn-danger mb" formaction="deleteDestacados.php?id='.$row3['idDestacado'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
+                <button type="submit" class="btn btn-danger mb" formaction="deleteDestacados.php?id='.$row3['idDestino'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
               </form>
               </div>
             </div>
@@ -151,7 +93,7 @@
           <form enctype="multipart/form-data" method="POST" action=createDestacado.php>
           <img class="card-img-top" src="http://www.placehold.it/348x232" alt="Carousel 1">
             <div class="card-body mb">
-                <h5 class="card-title">Agregar Destino Destacado</h5>
+                <h5 class="card-title">Agregar Destino</h5>
                 <p class="card-text">Tamaño recomendado:348x232 pixeles</p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>

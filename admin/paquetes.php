@@ -1,11 +1,5 @@
 <?php
  include('conexion.php');
-        $result3 = $enlace->query("SELECT * FROM slider");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-              
-            }
-        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,8 +34,8 @@
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="index.php">Pagina Principal</a>
-          <a class="dropdown-item" href="#">Paquetes</a>
-          <a class="dropdown-item" href="#">Destinos</a>
+          <a class="dropdown-item" href="paquetes.php">Paquetes</a>
+          <a class="dropdown-item" href="destinos.php">Destinos</a>
         </div>
       </li>
       <li class="nav-item">
