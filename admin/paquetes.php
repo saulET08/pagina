@@ -34,8 +34,8 @@
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="index.php">Pagina Principal</a>
-          <a class="dropdown-item" href="paquetes.php">Paquetes</a>
-          <a class="dropdown-item" href="destinos.php">Destinos</a>
+          <a class="dropdown-item" href="#">Paquetes</a>
+          <a class="dropdown-item" href="#">Destinos</a>
         </div>
       </li>
       <li class="nav-item">
@@ -51,61 +51,23 @@
 
 <div class="container">
   <div class="row">
-    <div class="container">
-  <div class="row">
-        <div class="col-md-4">
+        <?php
+      $cont = 1;
+      $result3 = $enlace->query("SELECT * FROM paquetes ");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode('<div class="col-md-4">
         <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=<?php 
-        $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='1' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "editPaquetes.php?id=".$row3['idpaquete']."";
-            }
-        }
-        ?>>
-              <img class="card-img-top" src="<?php 
-        $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='1' "); 
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo "../".utf8_encode($row3['ruta']);
-            }
-        }
-        ?>" alt="Carousel 1">
-        <h6 class="mt-1"><?php 
-                $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='1' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['lugar']);
-                 }
-                  }
-                  ?></h6>
-         <h6 class="mt-1"><?php 
-                $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='1' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['fecha']);
-                 }
-                  }
-                  ?></h6>
-        <h6 class="mt-1"><?php 
-                $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='1' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['descripcion']);
-                 }
-                  }
-                  ?></h6>
-         <h6 class="mt-1"><?php 
-                $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='1' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['dias']);
-                 }
-                  }
-                  ?></h6>          
-              <div class="card-body mb">
-                <h5 class="card-title">Paquete 1</h5>
-                <p class="card-text">Tamaño recomendado:400x250 pixeles</p>
+          <form enctype="multipart/form-data" method="POST" action=editPaquetes.php?id='.$row3['idpaquete'].'>
+          <img class="card-img-top" src="');echo  "../".($row3['ruta'].'" alt="Carousel 1">
+                    <h6 class="mt-1">'.$row3['lugar'].'</h6>
+                    <h6 class="mt-1">'.$row3['fecha'].'</h6>
+                    <h6 class="mt-1">'.$row3['descripcion'].'</h6>
+                    <h6 class="mt-1">'.$row3['dias'].'</h6>
+            <div class="card-body mb">
+                <h5 class="card-title">Imagen '.$cont.'</h5>
+                <p class="card-text">Tamaño recomendado:640x481 pixeles</p>
+                
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
@@ -126,12 +88,21 @@
                    <h5 class="card-title">Dias y noches del viaje</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. 3 noches y 2 dias" name="dias">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class='fas fa-edit'></span></a> Cambiar datos</button>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar imagen</button>
+                <button type="submit" class="btn btn-danger mb" formaction="deletePaquetes.php?id='.$row3['idpaquete'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
               </form>
               </div>
             </div>
-        </div>
-       
+            <br>
+            <br>
+        </div>');
+          ++$cont;
+          }
+        }
+        ?>
+      </div>
+    </div>
+<!--       
         <div class="col-md-4">
         <div class="card mb">
           <form enctype="multipart/form-data" method="POST" action=<?php 
@@ -150,22 +121,8 @@
             }
         }
         ?>" alt="Carousel 1">
-        <h6 class="mt-1"><?php 
-                $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='2' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['lugar']);
-                 }
-                  }
-                  ?></h6>
-         <h6 class="mt-1"><?php 
-                $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='2' "); 
-                 if ($result3->num_rows > 0) {
-                 while($row3 = $result3->fetch_assoc()) {
-                 echo utf8_encode($row3['fecha']);
-                 }
-                  }
-                  ?></h6>
+        <h6 class="mt-1"></h6>
+         <h6 class="mt-1"></h6>
         <h6 class="mt-1"><?php 
                 $result3 = $enlace->query("SELECT * FROM paquetes where idpaquete='2' "); 
                  if ($result3->num_rows > 0) {
@@ -456,7 +413,6 @@
         </div>
         </div>
       </div>
-      </div>
-      </div>
+    -->
 </body>
 </html>
