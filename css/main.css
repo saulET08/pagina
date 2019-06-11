@@ -98,15 +98,15 @@ section{
 	border-style: 1px solid white;
 	color: white;
 	margin-left: 150px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .details img{
 	width: 30px;
 	height: 30px;
-	opacity: 0.6;
+	opacity: 1;
 	position: relative;
-	top: -690px;
+	top: -2.5px;
 	left: 5px;
 }
 
@@ -129,13 +129,13 @@ section{
 
 .details2 h1{
 	font-size: 40px;
-	color: #D7D8D8;
+	color: white;
 	font-family: calibri ligth;
 }
 
 .details2 p{
 	font-family: calibri ligth;
-	color: #D7D8D8;
+	color: white;
 	font-size: 20px;
 
 }
@@ -169,13 +169,13 @@ section{
 
 .details3 h1{
 	font-size: 40px;
-	color: #D7D8D8;
+	color: white;
 	font-family: calibri ligth;
 }
 
 .details3 p{
 	font-family: calibri ligth;
-	color: #D7D8D8;
+	color: white;
 	font-size: 20px;
 
 }
@@ -198,7 +198,7 @@ section{
 
 .details4 {
 	width: 100%;
-	max-width: 700px;
+	max-width: 500px;
 	position: relative;
 	top: 150px;
 	left: 10px;
@@ -208,13 +208,13 @@ section{
 
 .details4 h1{
 	font-size: 40px;
-	color: #D7D8D8;
+	color: white;
 	font-family: calibri ligth;
 }
 
 .details4 p{
 	font-size: 20px;
-	color: #D7D8D8;
+	color: white;
 	font-family: calibri ligth;
 }
 
