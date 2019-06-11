@@ -1,4 +1,8 @@
 /*cambiar el tamaño de la imagen del slider*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
 .bd-example, .d-block{
 	max-height: 500px;
 	width: cover;
@@ -336,3 +340,120 @@ color: black;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #e1ea56;
 }
+
+
+.colorm{
+  color:black;
+}
+
+.maz{
+  background-color: #accee3;
+}
+
+
+.contacto{
+   background: url("http://www.fondox.net/descargar.php?id=765&resolucion=2560x1600") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+ 
+}
+
+/* Imagenes de paquete, pagina */
+
+.maz {
+  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4w8qfPNhgilfsnun8/4k-ocean-waves-crash-into-rocks-in-slow-motion-near-pebble-beach-california_boedjgvb__F0002.png") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+}
+
+.say {
+  background: url("https://vallartaextreme.com/wp-content/uploads/2018/10/Sayulita-9.jpg") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+}
+
+.mex {
+  background: url("https://farm5.static.flickr.com/4101/4898320780_f7a8129d33_b.jpg") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+}
+
+.gua {
+  background: url("https://i.pinimg.com/originals/82/37/d7/8237d773ba18fe06bfe206174d11bcd0.jpg") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+}
+
+.hua {
+  background: url("https://i.ytimg.com/vi/PH0goKAAwXo/maxresdefault.jpg") no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+}
+
+
+.texto{
+    position: absolute;
+  /*nos posicionamos en el centro del navegador*/
+  top:27%;
+  left:42%;
+  /*determinamos una anchura*/
+  width:600px;
+  /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+  margin-left:-200px;
+  /*determinamos una altura*/
+  height:400px;
+  /*indicamos que el margen superior, es la mitad de la altura*/
+  margin-top:-150;
+  border:1px solid #808080;
+  padding:5px;
+  font: 200% sans-serif;
+}
+.opacity{
+  /*Div que ocupa toda la pantalla*/
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:#fff;
+  /*IE*/
+  filter: alpha(opacity=50);
+  /*FireFox Opera*/
+  opacity: .7;
+}
+
+/*nav.navbar {
+    background-color: #474747;
+}*/
+
+
