@@ -21,27 +21,28 @@ section{
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background-image: url(../img/colombia.jpg);
+	background-image: url(../img/guanajuato.jpg);
 	background-size: 200%;
-	animation: movimiento 10s infinite linear alternate;
+	animation: movimiento 20s infinite linear alternate;
 }
 
 #seccion2{
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background-image: url(../img/china.jpg);
+	background-image: url(../img/mazatlan.jpg);
 	background-size: 200%;
-	animation: movimiento 10s infinite linear alternate;
+	animation: movimiento 20s infinite linear alternate;
 }
 
 #seccion3{
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background-image: url(../img/islandia.jpg);
+	background-image: url(../img/sayulita.jpg);
 	background-size: 200%;
-	animation: movimiento 10s infinite linear alternate;
+	animation: movimiento 20s infinite linear alternate;
+
 }
 
 @keyframes movimiento{
@@ -79,8 +80,15 @@ section{
 
 .details h1{
 	font-size: 40px;
-	font-weight: 100px;
-	color: white;
+	color: #D7D8D8;
+	font-family: calibri ligth;
+}
+
+.details p{
+	font-family: calibri ligth;
+	color: #D7D8D8;
+	font-size: 20px;
+
 }
 
 .details button{
@@ -88,6 +96,133 @@ section{
 	font-size: 16px;
 	background: none;
 	border-style: 1px solid white;
+	color: white;
+	margin-left: 150px;
+	margin-top: 30px;
+}
+
+.details img{
+	width: 30px;
+	height: 30px;
+	opacity: 0.6;
+	position: relative;
+	top: -690px;
+	left: 5px;
+}
+
+.container-details2 {
+	width: 100%;
+	max-width: 1200px;
+	position: relative;
+	margin: auto;
+}
+
+.details2 {
+	width: 100%;
+	max-width: 500px;
+	position: relative;
+	top: 150px;
+	left: 10px;
+	color:white;
+
+}
+
+.details2 h1{
+	font-size: 40px;
+	color: #D7D8D8;
+	font-family: calibri ligth;
+}
+
+.details2 p{
+	font-family: calibri ligth;
+	color: #D7D8D8;
+	font-size: 20px;
+
+}
+
+.details2 button{
+	padding:10px 20px;
+	font-size: 16px;
+	background: none;
+	border-style: 1px solid white;
+	color: white;
+	margin-left: 250px;
+	margin-top: -1070px;
+}
+
+.container-details3 {
+	width: 100%;
+	max-width: 1500px;
+	position: relative;
+	margin: auto;
+}
+
+.details3 {
+	width: 100%;
+	max-width: 500px;
+	position: relative;
+	top: 150px;
+	left: 10px;
+	color:white;
+
+}
+
+.details3 h1{
+	font-size: 40px;
+	color: #D7D8D8;
+	font-family: calibri ligth;
+}
+
+.details3 p{
+	font-family: calibri ligth;
+	color: #D7D8D8;
+	font-size: 20px;
+
+}
+
+.details3 button{
+	padding:10px 20px;
+	font-size: 16px;
+	background: none;
+	border-style: 1px solid white;
+	color: white;
+	margin-left: 150px;
+}
+
+.container-details4 {
+	width: 100%;
+	max-width: 1500px;
+	position: relative;
+	margin: auto;
+}
+
+.details4 {
+	width: 100%;
+	max-width: 700px;
+	position: relative;
+	top: 150px;
+	left: 10px;
+	color:white;
+
+}
+
+.details4 h1{
+	font-size: 40px;
+	color: #D7D8D8;
+	font-family: calibri ligth;
+}
+
+.details4 p{
+	font-size: 20px;
+	color: #D7D8D8;
+	font-family: calibri ligth;
+}
+
+.details4 button{
+	padding:10px 20px;
+	font-size: 16px;
+	background: none;
+	border-style: 1px white;
 	color: white;
 	margin-left: 150px;
 }
