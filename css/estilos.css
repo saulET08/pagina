@@ -4,8 +4,8 @@
 
 
 .bd-example, .d-block{
-	max-height: 500px;
-	width: cover;
+  max-height: 500px;
+  width: cover;
 }
 .navbar{
   border-style: solid;
@@ -455,5 +455,3 @@ color: black;
 /*nav.navbar {
     background-color: #474747;
 }*/
-
-

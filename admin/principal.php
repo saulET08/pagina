@@ -126,7 +126,7 @@
           <h6 class="mt-1"><span class="fa fa-map-marker"></span>'.$row3['lugar'].'</h6>
             <div class="card-body mb">
                 <h5 class="card-title">Imagen '.$cont.'</h5>
-                <p class="card-text">Tamaño recomendado:400x250 pixeles</p>
+                <p class="card-text">Tamaño recomendado:348x232 pixeles</p>
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
@@ -155,10 +155,10 @@
  <div class="col-md-4">
         <div class="card mb">
           <form enctype="multipart/form-data" method="POST" action=createDestacado.php>
-          <img class="card-img-top" src="http://www.placehold.it/400x250" alt="Carousel 1">
+          <img class="card-img-top" src="http://www.placehold.it/348x232" alt="Carousel 1">
             <div class="card-body mb">
                 <h5 class="card-title">Agregar Destino Destacado</h5>
-                <p class="card-text">Tamaño recomendado:400x250 pixeles</p>
+                <p class="card-text">Tamaño recomendado:348x232 pixeles</p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
