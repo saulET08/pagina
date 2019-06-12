@@ -84,7 +84,7 @@
                   <p>'.$row3['descripcion'].'</p>
                   <p class="card-text">'.$row3['dias'].'</p>
                   <p>
-                  <a href="maz.html" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
+                  <a href="destino.php?id='.$row3['idpaquete'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
                   </p>
                   </div>
                   </div>');

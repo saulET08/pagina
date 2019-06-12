@@ -1,3 +1,7 @@
+<?php
+include('admin/conexion.php');
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +31,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="paquetes.html">Paquetes</a>
+        <a class="nav-link" href="paquetes.php">Paquetes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="destinos.html">Destinos</a>
@@ -39,20 +43,30 @@
   </div>
 </nav>
 </header>
-<body class="maz">
+<body>
 <!--contenido-->
-<br><br><br><br><br><br><br><br>
-<section>
-<div align="center">
-   
-  <!--<img src="img/maz.jpg" align="left" width="500" height="500">-->
-  <br><br><br>
-
+<br><br><br>
+<section <?php
+            $id=$_GET['id'];
+            $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
+            if ($result3->num_rows > 0) {
+                while($row3 = $result3->fetch_assoc()) {
+                  echo utf8_encode('style="background: url('.$row3['ruta2'].'); 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;"');
+                }
+              }
+    ?>
+>
 <div align="center" class="texto">
   <div class="opacity">
    
     <?php
-    include('admin/conexion.php');
     $id=$_GET['id'];
     $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
             if ($result3->num_rows > 0) {
@@ -60,10 +74,7 @@
                   echo utf8_encode($row3['descripcion2'].'<br><a href="https://www.facebook.com/ROCATOURS1/" target="_blank" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">'); echo ('¡Viajar!</a>');
                 }
               }
-
-
     ?>
-
   </div> 
 </div>
 

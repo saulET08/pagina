@@ -12,18 +12,8 @@
   border-width: 1px;
 }
 /*Destacados*/
-main {
-      -webkit-column-count:3;
-      -moz-column-count:3;
-      column-count:3;
-
-      -moz-column-rule: 1px solid #bbb;
-      -webkit-column-rule: 1px solid #bbb;
-      column-rule: 1px solid #bbb;
-
-      -moz-column-width: 280px;         
-      -webkit-column-width: 280px;
-      column-width: 280px;
+.mt-1{
+  text-align: center;
 }
 /*tamaño de letra del menu */
 .nav-link{
