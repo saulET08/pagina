@@ -12,8 +12,18 @@
   border-width: 1px;
 }
 /*Destacados*/
-.mt-1{
-  text-align: center;
+main {
+      -webkit-column-count:3;
+      -moz-column-count:3;
+      column-count:3;
+
+      -moz-column-rule: 1px solid #bbb;
+      -webkit-column-rule: 1px solid #bbb;
+      column-rule: 1px solid #bbb;
+
+      -moz-column-width: 280px;         
+      -webkit-column-width: 280px;
+      column-width: 280px;
 }
 /*tamaño de letra del menu */
 .nav-link{
@@ -364,62 +374,6 @@ color: black;
 }
 
 /* Imagenes de paquete, pagina */
-
-.maz {
-  background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4w8qfPNhgilfsnun8/4k-ocean-waves-crash-into-rocks-in-slow-motion-near-pebble-beach-california_boedjgvb__F0002.png") no-repeat fixed center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 100%;
-   width: 100% ;
-   text-align: center;
-}
-
-.say {
-  background: url("https://vallartaextreme.com/wp-content/uploads/2018/10/Sayulita-9.jpg") no-repeat fixed center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 100%;
-   width: 100% ;
-   text-align: center;
-}
-
-.mex {
-  background: url("https://farm5.static.flickr.com/4101/4898320780_f7a8129d33_b.jpg") no-repeat fixed center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 100%;
-   width: 100% ;
-   text-align: center;
-}
-
-.gua {
-  background: url("https://i.pinimg.com/originals/82/37/d7/8237d773ba18fe06bfe206174d11bcd0.jpg") no-repeat fixed center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 100%;
-   width: 100% ;
-   text-align: center;
-}
-
-.hua {
-  background: url("https://i.ytimg.com/vi/PH0goKAAwXo/maxresdefault.jpg") no-repeat fixed center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 100%;
-   width: 100% ;
-   text-align: center;
-}
-
 
 .texto{
     position: absolute;
