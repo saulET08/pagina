@@ -65,9 +65,9 @@
                     <h6 class="mt-1">'.$row3['descripcion'].'</h6>
                     <h6 class="mt-1">'.$row3['dias'].'</h6>
             <div class="card-body mb">
-                <h5 class="card-title">Imagen '.$cont.'</h5>
-                <p class="card-text">Tamaño recomendado:640x481 pixeles</p>
-                
+                <h5 class="card-title">Paquete '.$cont.'</h5>
+                <p class="card-text">');echo ('Tamaño recomendado:640x481 pixeles</p>
+                <p class="card-text"><b>Nota: Modifique el paquete de abajo tambien</b></p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
@@ -82,13 +82,13 @@
                    </div>
                    <div class="form-group">
                    <h5 class="card-title">Que contiene el paquete</h5>
-                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Todo incluido" name="descripcion">
+                    <textarea class="form-control" id="descripcion" name="descripcion">Escribe aqui</textarea>
                    </div>
                    <div class="form-group">
                    <h5 class="card-title">Dias y noches del viaje</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. 3 noches y 2 dias" name="dias">
                    </div>
-                <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar imagen</button>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar datos</button>
                 <button type="submit" class="btn btn-danger mb" formaction="deletePaquetes.php?id='.$row3['idpaquete'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
               </form>
               </div>
@@ -102,5 +102,106 @@
         ?>
       </div>
     </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=createPaquete.php>
+          <img class="card-img-top" src="http://www.placehold.it/640x481" alt="Carousel 1">
+            <div class="card-body mb">
+                <h5 class="card-title">Agregar paquete</h5>
+                <p class="card-text">Tamaño recomendado:640x481 pixeles</p>
+                <p class="card-text">Nota: Agrege paquete tambien abajo</p>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Lugar</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Fecha de viaje</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. 10 de Enero" name="fecha">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Que contiene el paquete</h5>
+                    <textarea class="form-control" id="descripcion" name="descripcion">Escribe aqui</textarea>
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Dias y noches del viaje</h5>
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. 3 noches y 2 dias" name="dias">
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
+              </form>
+              </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        </div>
+    </div>
+<div><br/><h1 class="DestinosD">Paquetes Boton Viajar</h1><br></div>
+<div class="container">
+  <div class="row">
+<?php
+      $cont = 1;
+      $result3 = $enlace->query("SELECT * FROM paquetes ");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode('<div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=editPaquetes2.php?id='.$row3['idpaquete'].'>
+          <img class="card-img-top" src="');echo utf8_encode("../".$row3['ruta2'].'" alt="Carousel 1">
+            <div class="card-body mb">
+                <h5 class="card-title">Paquete '.$cont.'</h5>
+                <p class="card-text">');echo ('Tamaño recomendado:1366x500 pixeles</p>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
+                  </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Que contiene el paquete</h5>
+                    <textarea class="form-control" id="descripcion" name="descripcion" required>Escribe aqui</textarea>
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar datos</button>
+              </form>
+              </div>
+            </div>
+            <br>
+            <br>
+        </div>');
+          ++$cont;
+          }
+        }
+        ?>
+         </div>
+    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card mb">
+          <form enctype="multipart/form-data" method="POST" action=createpaquete2.php>
+          <img class="card-img-top" src="http://www.placehold.it/1366x500" alt="Carousel 1">
+            <div class="card-body mb">
+                <h5 class="card-title">Agrega Paquete</h5>
+                <p class="card-text">Tamaño recomendado:1366x500 pixeles</p>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
+                  </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Que contiene el paquete</h5>
+                    <textarea class="form-control" id="descripcion" name="descripcion" required>Escribe aqui</textarea>
+                   </div>
+                <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
+              </form>
+              </div>
+            </div>
+            <br>
+            <br>
+        </div>
+  </div>
+</div>
 </body>
 </html>

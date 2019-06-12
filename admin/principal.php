@@ -64,7 +64,7 @@
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar imagen</button>
                 <button type="submit" class="btn btn-danger mb" formaction="deleteSlider.php?id='.$row3['idSlider'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
@@ -81,7 +81,6 @@
        
 </div>
 </div>
-
 <div class="container">
   <div class="row">
  <div class="col-md-4">
@@ -94,7 +93,7 @@
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
               </form>
@@ -124,11 +123,11 @@
                 
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
                    </div>
                    <div class="form-group">
                    <h5 class="card-title">Lugar</h5>
-                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar" required>
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar datos</button>
                 <button type="submit" class="btn btn-danger mb" formaction="deleteDestacados.php?id='.$row3['idDestacado'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
@@ -155,11 +154,11 @@
                 <p class="card-text">Tamaño recomendado:348x232 pixeles</p>
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img" required>
                    </div>
                    <div class="form-group">
                    <h5 class="card-title">Lugar</h5>
-                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                    <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar" required>
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
               </form>

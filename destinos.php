@@ -1,6 +1,3 @@
-<?php
- include('admin/conexion.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,31 +6,36 @@
   <!-- Diseño responsivo-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RocaTours</title>
-  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css bootstrap/bootstrap.min.css">
   <!-- Bootstrap JS,JQuery y Ajax-->
   <script src="js/jquery-3.3.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
   <!-- *********** -->
+
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-grey nav-fixed-top">
+  <!--Navegador -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-grey fixed-top">
   <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="paquetes.php">Paquetes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="destinos.php">Destinos</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="destinos.html">Destinos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -41,58 +43,77 @@
   </ul>
   </div>
 </nav>
-</header>
+</header> 
 <body>
-<!--contenido-->
-<div><h1>Paquetes de Promoción</h1></div>
-<div class="card-columns">
-<?php
-       $result3 = $enlace->query("SELECT * FROM paquetes limit 3 ");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode ('<div class="card bg-dark text-white">
-                  <img src="'.$row3['ruta'].'" class="card-img" alt="...">
-                  <div class="card-img-overlay">
-                  <h5 class="card-title">'.$row3['lugar'].'</h5>
-                  <p class="card-text">'.$row3['fecha'].'</p>
-                  <p>'.$row3['descripcion'].'</p>
-                  <p class="card-text">'.$row3['dias'].'</p>
-                  <p>
-                  <a href="paquete.php?id='.$row3['idpaquete'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-                  </p>
-                  </div>
-                  </div>');
-          }
-        }
-?>
-  <div class="card border-warning mb-3 text-white text-center p-3">
-    <blockquote class="blockquote mb-0">
-      <p style="color:black";>Puedes armar tu paquete como tu gustes.</p>
-      <p style="color:black";>Ya sea todo incluido, solo hotel, solo transporte.</p>
-      <p style="color:black";>¡Como tu lo desees!</p>
-    </blockquote>
-  </div>
-<?php
-       $result3 = $enlace->query("SELECT * FROM paquetes limit 3,18446744073709551615");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode ('<div class="card bg-dark text-white">
-                  <img src="'.$row3['ruta'].'" class="card-img" alt="...">
-                  <div class="card-img-overlay">
-                  <h5 class="card-title">'.$row3['lugar'].'</h5>
-                  <p class="card-text">'.$row3['fecha'].'</p>
-                  <p>'.$row3['descripcion'].'</p>
-                  <p class="card-text">'.$row3['dias'].'</p>
-                  <p>
-                  <a href="destino.php?id='.$row3['idpaquete'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-                  </p>
-                  </div>
-                  </div>');
-          }
-        }
-?>
-</div>
 
+<!-- Imagenes -->
+<section class="parrallax" <?php
+       $result3 = $enlace->query("SELECT * FROM destinos ");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+            echo utf8_encode ('style="width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('.$row3['ruta'].');
+  background-size: 300%;
+  animation: movimiento 50s infinite linear alternate;"');
+          }
+        }
+?>>
+<?php
+$result3 = $enlace->query("SELECT * FROM destinos ");
+        if ($result3->num_rows > 0) {
+            while($row3 = $result3->fetch_assoc()) {
+        echo utf8_encode('<div class="capa-gradient"></div>
+        <div class="container-details">
+        <div class="details">
+        <h1>'.$row3['lugar'].'</h1>
+        <button onclick="location.href="destino.php?id='.$row3['iddestino'].'">Ver más detalles</button> 
+        <img class="animated infinite bounce" src="img/flecha.png">
+      </div>
+    </div>
+    </div>');
+  }
+}
+?>
+
+</section>
+<!--
+<section class="parrallax" id="seccion1">
+  
+  <div class="capa-gradient"></div>
+    <div class="container-details">
+      <div class="details">
+        <h1>Guanajuato, Gto.</h1>
+        <button onclick="location.href='guanajuato.html'">Ver más detalles</button> 
+        <img class="animated infinite bounce" src="img/flecha.png">
+      </div>
+    </div>
+</section>
+
+<section class="parrallax" id="seccion2">
+  <div class="capa-gradient"></div>
+    <div class="container-details">
+      <div class="details">
+        <h1>Mazatlán, Sinaloa.</h1>
+        <button onclick="location.href='mazatlan.html'">Ver más detalles</button>
+        <img class="animated infinite bounce" src="img/flecha.png">
+      </div>
+    </div>
+</section>
+
+<section class="parrallax" id="seccion3">
+  <div class="capa-gradient"></div>
+    <div class="container-details">
+      <div class="details">
+        <h1>Sayulita, Nayarit.</h1>
+        <button onclick="location.href='sayulita.html'">Ver más detalles</button>
+        <img class="animated infinite bounce" src="img/flecha2.png">
+      </div>
+    </div>
+</section>
+-->
+<!-- Pie de pagina -->
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -149,5 +170,6 @@
 </div>
 </div>
 </footer>
+
 </body>
 </html>

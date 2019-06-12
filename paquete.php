@@ -1,5 +1,6 @@
 <?php
- include('admin/conexion.php');
+include('admin/conexion.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +8,7 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/jpg" href="img/logo.png">
   <!-- Diseño responsivo-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width"/>
   <title>RocaTours</title>
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <!-- Bootstrap CSS -->
@@ -22,8 +23,8 @@
   <!-- *********** -->
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-grey nav-fixed-top">
-  <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png"></a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-grey fixed-top">
+   <a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -33,7 +34,7 @@
         <a class="nav-link" href="paquetes.php">Paquetes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="destinos.php">Destinos</a>
+        <a class="nav-link" href="destinos.html">Destinos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -44,56 +45,40 @@
 </header>
 <body>
 <!--contenido-->
-<div><h1>Paquetes de Promoción</h1></div>
-<div class="card-columns">
-<?php
-       $result3 = $enlace->query("SELECT * FROM paquetes limit 3 ");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode ('<div class="card bg-dark text-white">
-                  <img src="'.$row3['ruta'].'" class="card-img" alt="...">
-                  <div class="card-img-overlay">
-                  <h5 class="card-title">'.$row3['lugar'].'</h5>
-                  <p class="card-text">'.$row3['fecha'].'</p>
-                  <p>'.$row3['descripcion'].'</p>
-                  <p class="card-text">'.$row3['dias'].'</p>
-                  <p>
-                  <a href="paquete.php?id='.$row3['idpaquete'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-                  </p>
-                  </div>
-                  </div>');
-          }
-        }
-?>
-  <div class="card border-warning mb-3 text-white text-center p-3">
-    <blockquote class="blockquote mb-0">
-      <p style="color:black";>Puedes armar tu paquete como tu gustes.</p>
-      <p style="color:black";>Ya sea todo incluido, solo hotel, solo transporte.</p>
-      <p style="color:black";>¡Como tu lo desees!</p>
-    </blockquote>
-  </div>
-<?php
-       $result3 = $enlace->query("SELECT * FROM paquetes limit 3,18446744073709551615");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode ('<div class="card bg-dark text-white">
-                  <img src="'.$row3['ruta'].'" class="card-img" alt="...">
-                  <div class="card-img-overlay">
-                  <h5 class="card-title">'.$row3['lugar'].'</h5>
-                  <p class="card-text">'.$row3['fecha'].'</p>
-                  <p>'.$row3['descripcion'].'</p>
-                  <p class="card-text">'.$row3['dias'].'</p>
-                  <p>
-                  <a href="destino.php?id='.$row3['idpaquete'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-                  </p>
-                  </div>
-                  </div>');
-          }
-        }
-?>
+<br><br><br>
+<section <?php
+            $id=$_GET['id'];
+            $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
+            if ($result3->num_rows > 0) {
+                while($row3 = $result3->fetch_assoc()) {
+                  echo utf8_encode('style="background: url('.$row3['ruta2'].'); 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;"');
+                }
+              }
+    ?>
+>
+<div align="center" class="texto">
+  <div class="opacity">
+   
+    <?php
+    $id=$_GET['id'];
+    $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
+            if ($result3->num_rows > 0) {
+                while($row3 = $result3->fetch_assoc()) {
+                  echo utf8_encode($row3['descripcion2'].'<br><a href="https://www.facebook.com/ROCATOURS1/" target="_blank" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">'); echo ('¡Viajar!</a>');
+                }
+              }
+    ?>
+  </div> 
 </div>
-
-
+</div>
+</section>
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
    <div class="row">
@@ -125,7 +110,7 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="index.php"> Inicio</a> </li>
+                        <li> <a href="index.html"> Inicio</a> </li>
                         <li> <a href="paquetes.html"> Paquetes</a> </li>
                         <li> <a href="destinos.html"> Destinos</a> </li>
                         <li> <a href="contacto.html"> Contacto</a> </li>

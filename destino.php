@@ -46,46 +46,30 @@ include('admin/conexion.php');
 <body>
 <!--contenido-->
 <br><br><br>
-<section <?php
+<section class="parrallax" <?php
             $id=$_GET['id'];
             $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
             if ($result3->num_rows > 0) {
                 while($row3 = $result3->fetch_assoc()) {
-                  echo utf8_encode('style="background: url('.$row3['ruta2'].'); 
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height: 100%;
-   width: 100% ;
-   text-align: center;"');
+                  echo utf8_encode('style="width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('.$row3['ruta'].');
+  background-size: 300%;
+  animation: movimiento 50s infinite linear alternate;"');
+                  echo utf8_encode('<div class="capa-gradient"></div>
+    <div class="container-details2">
+      <div class="details2">
+        <h1>'.$row3['lugar'].'</h1>
+        <p>'.$row3['descripcion'].'</p>
+        <button id="btn_guanajuato" onclick="location.href='destinos.php'"> Regresar </button>
+      </div>
+    </div>')
                 }
               }
     ?>
 >
-<div align="center" class="texto">
-  <div class="opacity">
-   
-    <?php
-    $id=$_GET['id'];
-    $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
-            if ($result3->num_rows > 0) {
-                while($row3 = $result3->fetch_assoc()) {
-                  echo utf8_encode($row3['descripcion2'].'<br><a href="https://www.facebook.com/ROCATOURS1/" target="_blank" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">'); echo ('¡Viajar!</a>');
-                }
-              }
-    ?>
-  </div> 
-</div>
-
-</div>
 </section>
-
-
-
-
-
-
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
    <div class="row">

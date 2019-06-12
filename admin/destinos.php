@@ -57,13 +57,12 @@
             while($row3 = $result3->fetch_assoc()) {
             echo utf8_encode('<div class="col-md-4">
         <div class="card mb">
-          <form enctype="multipart/form-data" method="POST" action=editDestacados.php?id='.$row3['idDestino'].'>
+          <form enctype="multipart/form-data" method="POST" action=editDestinos.php?id='.$row3['iddestino'].'>
           <img class="card-img-top" src="');echo  "../".($row3['ruta'].'" alt="Carousel 1">
           <h6 class="mt-1"><span class="fa fa-map-marker"></span>'.$row3['lugar'].'</h6>
             <div class="card-body mb">
                 <h5 class="card-title">Imagen '.$cont.'</h5>
                 <p class="card-text">Tamaño recomendado:348x232 pixeles</p>
-                
                   <div class="form-group">
                     <label for="exampleFormControlFile1">Subir imagen en formato jpg o png</label>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img">
@@ -71,6 +70,10 @@
                    <div class="form-group">
                    <h5 class="card-title">Lugar</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                   <div class="form-group">
+                   <h5 class="card-title">Descripcion del lugar</h5>
+                    <textarea class="form-control" id="descripcion" name="descripcion" required>Escribe aqui</textarea required>
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-edit"></span></a> Cambiar datos</button>
                 <button type="submit" class="btn btn-danger mb" formaction="deleteDestacados.php?id='.$row3['idDestino'].'"><span class="fas fa-trash-alt"></span></a> Eliminar</button>
@@ -102,6 +105,9 @@
                    <div class="form-group">
                    <h5 class="card-title">Lugar</h5>
                     <input type="text" class="form-control" id="numero"  placeholder="Ej. Mazatlan,Sinaloa" name="lugar">
+                   </div>
+                   <h5 class="card-title">Descripcion del lugar</h5>
+                    <textarea class="form-control" id="descripcion" name="descripcion" required>Escribe aqui</textarea>
                    </div>
                 <button type="submit" class="btn btn-primary mb"><span class="fas fa-upload"></span></a> Subir imagen</button>
               </form>
