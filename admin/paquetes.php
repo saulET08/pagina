@@ -59,7 +59,7 @@
             echo utf8_encode('<div class="col-md-4">
         <div class="card mb">
           <form enctype="multipart/form-data" method="POST" action=editPaquetes.php?id='.$row3['idpaquete'].'>
-          <img class="card-img-top" src="');echo  "../".($row3['ruta'].'" alt="Carousel 1">
+          <img class="card-img-top" src="');echo utf8_encode("../".$row3['ruta'].'" alt="Carousel 1">
                     <h6 class="mt-1">'.$row3['lugar'].'</h6>
                     <h6 class="mt-1">'.$row3['fecha'].'</h6>
                     <h6 class="mt-1">'.$row3['descripcion'].'</h6>
