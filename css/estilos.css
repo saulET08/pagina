@@ -4,16 +4,26 @@
 
 
 .bd-example, .d-block{
-  max-height: 500px;
-  width: cover;
+	max-height: 500px;
+	width: cover;
 }
 .navbar{
   border-style: solid;
   border-width: 1px;
 }
 /*Destacados*/
-.mt-1{
-  text-align: center;
+main {
+      -webkit-column-count:3;
+      -moz-column-count:3;
+      column-count:3;
+
+      -moz-column-rule: 1px solid #bbb;
+      -webkit-column-rule: 1px solid #bbb;
+      column-rule: 1px solid #bbb;
+
+      -moz-column-width: 280px;         
+      -webkit-column-width: 280px;
+      column-width: 280px;
 }
 /*tamaño de letra del menu */
 .nav-link{
@@ -26,6 +36,8 @@
 /*cambiar color de letra al slider*/
 .carousel-caption,h5,p{
   color:black;
+  font-weight: bolder;
+  font-size: 20px;
 }
 .destinos{
   font-size: 16px;
@@ -422,14 +434,14 @@ color: black;
 .texto{
     position: absolute;
   /*nos posicionamos en el centro del navegador*/
-  top:27%;
+  top:20%;
   left:42%;
   /*determinamos una anchura*/
   width:600px;
   /*indicamos que el margen izquierdo, es la mitad de la anchura*/
   margin-left:-200px;
   /*determinamos una altura*/
-  height:400px;
+  height:440px;
   /*indicamos que el margen superior, es la mitad de la altura*/
   margin-top:-150;
   border:1px solid #808080;
@@ -448,8 +460,12 @@ color: black;
   filter: alpha(opacity=50);
   /*FireFox Opera*/
   opacity: .7;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 /*nav.navbar {
     background-color: #474747;
 }*/
+
