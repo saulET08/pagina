@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-06-2019 a las 05:20:46
--- Versión del servidor: 10.1.40-MariaDB
--- Versión de PHP: 7.3.5
+-- Tiempo de generación: 12-06-2019 a las 03:52:14
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -46,6 +46,18 @@ INSERT INTO `destacados` (`idDestacado`, `ruta`, `lugar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `destinos`
+--
+
+CREATE TABLE `destinos` (
+  `iddestino` int(11) NOT NULL,
+  `ruta` varchar(200) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` varchar(200) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `paquetes`
 --
 
@@ -56,19 +68,20 @@ CREATE TABLE `paquetes` (
   `fecha` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `descripcion` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `dias` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
-  `url` varchar(200) COLLATE utf8_spanish_ci NOT NULL
+  `ruta2` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion2` varchar(200) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `paquetes`
 --
 
-INSERT INTO `paquetes` (`idpaquete`, `ruta`, `lugar`, `fecha`, `descripcion`, `dias`, `url`) VALUES
-(1, 'img/maz.jpg', 'Mázatlan', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', 'maz.html'),
-(2, 'img/sayulita.jpg', 'Sayulita', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', 'say.html'),
-(3, 'img/mexiquillo.jpg', 'Mexiquillo', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', 'mex.html'),
-(4, 'img/guanajuato.jpg', 'Guanajuato', 'Viaja con nosotros este 10 de Abril', 'Todo incluid', '3 noches y 2 dias', 'gua.html'),
-(5, 'img/pot.jpg', 'Huasteca', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', 'hua.html');
+INSERT INTO `paquetes` (`idpaquete`, `ruta`, `lugar`, `fecha`, `descripcion`, `dias`, `ruta2`, `descripcion2`) VALUES
+(1, 'img/maz.jpg', 'Mázatlan', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', '', ''),
+(2, 'img/sayulita.jpg', 'Sayulita', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', '', ''),
+(3, 'img/mexind.jpg', 'Mexiquillo', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', '', ''),
+(4, 'img/guanajuato.jpg', 'Guanajuato', 'Viaja con nosotros este 10 de Abril', 'Todo incluid', '3 noches y 2 dias', '', ''),
+(5, 'img/pot.jpg', 'Huasteca', 'Viaja con nosotros este 10 de Abril', 'Todo incluido', '3 noches y 2 dias', '', '');
 
 -- --------------------------------------------------------
 
@@ -120,6 +133,12 @@ ALTER TABLE `destacados`
   ADD PRIMARY KEY (`idDestacado`);
 
 --
+-- Indices de la tabla `destinos`
+--
+ALTER TABLE `destinos`
+  ADD PRIMARY KEY (`iddestino`);
+
+--
 -- Indices de la tabla `paquetes`
 --
 ALTER TABLE `paquetes`
@@ -146,6 +165,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `destacados`
   MODIFY `idDestacado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `destinos`
+--
+ALTER TABLE `destinos`
+  MODIFY `iddestino` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `paquetes`
