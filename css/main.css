@@ -23,7 +23,7 @@ section{
 	position: relative;
 	background-image: url(../img/guanajuato.jpg);
 	background-size: 300%;
-	animation: movimiento 20s infinite linear alternate;
+	animation: movimiento 50s infinite linear alternate;
 }
 
 #seccion2{
@@ -32,7 +32,7 @@ section{
 	position: relative;
 	background-image: url(../img/mazatlan.jpg);
 	background-size: 300%;
-	animation: movimiento 20s infinite linear alternate;
+	animation: movimiento 50s infinite linear alternate;
 }
 
 #seccion3{
@@ -40,9 +40,9 @@ section{
 	height: 100%;
 	position: relative;
 	background-image: url(../img/sayulita.jpg);
-	max-width: 300%
+	max-width: 300%;
 	background-size: 300%;
-	animation: movimiento 20s infinite linear alternate;
+	animation: movimiento 50s infinite linear alternate;
 
 }
 
@@ -150,7 +150,7 @@ section{
 	background: none;
 	border-style: 1px solid white;
 	color: white;
-	margin-top: 380px;
+	margin-top: 300px;
 	position: absolute;
 }
 
@@ -192,7 +192,7 @@ section{
 	background: none;
 	border-style: 1px solid white;
 	color: white;
-	margin-top: 380px;
+	margin-top: 300px;
 	position: absolute;
 }
 
@@ -234,6 +234,6 @@ section{
 	background: none;
 	border-style: 1px solid white;
 	color: white;
-	margin-top: 380px;
+	margin-top: 300px;
 	position: absolute;
 }
