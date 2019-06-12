@@ -38,7 +38,7 @@
         <a class="nav-link" href="paquetes.php">Paquetes</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="destinos.html">Destinos</a>
+        <a class="nav-link" href="destinos.php">Destinos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="contacto.html">Contacto</a>
