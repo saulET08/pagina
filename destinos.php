@@ -1,3 +1,6 @@
+<?php
+ include('admin/conexion.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,37 +50,35 @@
 <body>
 
 <!-- Imagenes -->
-<section class="parrallax" <?php
-       $result3 = $enlace->query("SELECT * FROM destinos ");
+<?php
+  $result3 = $enlace->query("SELECT * FROM destinos ");
+  $firts = $enlace->query("SELECT * FROM destinos order by iddestino desc limit 0,1");
+  $primera = $firts->fetch_assoc();
         if ($result3->num_rows > 0) {
             while($row3 = $result3->fetch_assoc()) {
-            echo utf8_encode ('style="width: 100%;
-  height: 100%;
-  position: relative;
-  background-image: url('.$row3['ruta'].');
-  background-size: 300%;
-  animation: movimiento 50s infinite linear alternate;"');
+            echo ('<section class="parrallax" style="width: 100%;
+            height: 100%;
+            position: relative;
+            background-image: url('.$row3['ruta'].');
+            background-size: 300%;
+            animation: movimiento 50s infinite linear alternate;">
+            <div class="capa-gradient"></div>
+            <div class="container-details">
+            <div class="details">
+            <h1>'.$row3['lugar'].'</h1>
+            <a href="destino.php?id='.$row3['iddestino'].'">
+            <button>Ver más detalles</button></a>
+            <img class="animated infinite bounce"');if($row3['iddestino']==$primera['iddestino']){echo ('src="img/flecha2.png">');}else {echo ('src="img/flecha.png">');}
+            echo ('</div>
+            </div>
+            </section>');
           }
         }
-?>>
-<?php
-$result3 = $enlace->query("SELECT * FROM destinos ");
-        if ($result3->num_rows > 0) {
-            while($row3 = $result3->fetch_assoc()) {
-        echo utf8_encode('<div class="capa-gradient"></div>
-        <div class="container-details">
-        <div class="details">
-        <h1>'.$row3['lugar'].'</h1>
-        <button onclick="location.href="destino.php?id='.$row3['iddestino'].'">Ver más detalles</button> 
-        <img class="animated infinite bounce" src="img/flecha.png">
-      </div>
-    </div>
-    </div>');
-  }
-}
 ?>
 
-</section>
+
+
+
 <!--
 <section class="parrallax" id="seccion1">
   

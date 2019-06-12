@@ -1,6 +1,5 @@
 <?php
 include('admin/conexion.php');
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,6 +10,7 @@ include('admin/conexion.php');
   <meta name="viewport" content="width=device-width"/>
   <title>RocaTours</title>
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css bootstrap/bootstrap.min.css">
   <!-- Bootstrap JS,JQuery y Ajax-->
@@ -46,30 +46,32 @@ include('admin/conexion.php');
 <body>
 <!--contenido-->
 <br><br><br>
-<section class="parrallax" <?php
-            $id=$_GET['id'];
-            $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
-            if ($result3->num_rows > 0) {
-                while($row3 = $result3->fetch_assoc()) {
-                  echo utf8_encode('style="width: 100%;
-  height: 100%;
-  position: relative;
-  background-image: url('.$row3['ruta'].');
-  background-size: 300%;
-  animation: movimiento 50s infinite linear alternate;"');
-                  echo utf8_encode('<div class="capa-gradient"></div>
-    <div class="container-details2">
-      <div class="details2">
-        <h1>'.$row3['lugar'].'</h1>
-        <p>'.$row3['descripcion'].'</p>
-        <button id="btn_guanajuato" onclick="location.href='destinos.php'"> Regresar </button>
-      </div>
-    </div>')
+<?php
+  $id=$_GET['id'];
+  $result3 = $enlace->query("SELECT *FROM destinos WHERE iddestino=$id");
+  if ($result3->num_rows > 0) {
+    while($row3 = $result3->fetch_assoc()) {
+      echo utf8_encode('<section class="parrallax" style="width: 100%;
+                        height: 100%;
+                        position: relative;
+                        background-image: url('.$row3['ruta'].');
+                        background-size: 300%;
+                        animation: movimiento 50s infinite linear alternate;"
+                        <div class="capa-gradient"></div>
+                        <div class="container-details2">
+                        <div class="details2">
+                        <h1>'.$row3['lugar'].'</h1>
+                        <p>'.$row3['descripcion'].'</p>
+                        <a href="destinos.php">
+                        <button id="btn_guanajuato"> Regresar </button></a>
+                        </div>
+                        </div>
+                        </section>');
                 }
               }
     ?>
 >
-</section>
+
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
    <div class="row">
