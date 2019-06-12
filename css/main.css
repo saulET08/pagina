@@ -22,7 +22,7 @@ section{
 	height: 100%;
 	position: relative;
 	background-image: url(../img/guanajuato.jpg);
-	background-size: 200%;
+	background-size: 300%;
 	animation: movimiento 20s infinite linear alternate;
 }
 
@@ -31,7 +31,7 @@ section{
 	height: 100%;
 	position: relative;
 	background-image: url(../img/mazatlan.jpg);
-	background-size: 200%;
+	background-size: 300%;
 	animation: movimiento 20s infinite linear alternate;
 }
 
@@ -40,7 +40,8 @@ section{
 	height: 100%;
 	position: relative;
 	background-image: url(../img/sayulita.jpg);
-	background-size: 200%;
+	max-width: 300%
+	background-size: 300%;
 	animation: movimiento 20s infinite linear alternate;
 
 }
@@ -71,6 +72,7 @@ section{
 .details{
 	width: 100%;
 	max-width: 500px;
+	min-width: 100px;
 	position: relative;
 	top: 500px;
 	left: 10px;
@@ -80,13 +82,13 @@ section{
 
 .details h1{
 	font-size: 40px;
-	color: #D7D8D8;
+	color: white;
 	font-family: calibri ligth;
 }
 
 .details p{
 	font-family: calibri ligth;
-	color: #D7D8D8;
+	color: white;
 	font-size: 20px;
 
 }
@@ -112,7 +114,7 @@ section{
 
 .container-details2 {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 500px;
 	position: relative;
 	margin: auto;
 }
@@ -122,7 +124,6 @@ section{
 	max-width: 500px;
 	position: relative;
 	top: 150px;
-	left: 10px;
 	color:white;
 
 }
@@ -130,13 +131,16 @@ section{
 .details2 h1{
 	font-size: 40px;
 	color: white;
+	left: 500px;
 	font-family: calibri ligth;
 }
 
 .details2 p{
 	font-family: calibri ligth;
 	color: white;
+	text-align: justify;
 	font-size: 20px;
+	position: absolute;
 
 }
 
@@ -146,13 +150,13 @@ section{
 	background: none;
 	border-style: 1px solid white;
 	color: white;
-	margin-left: 250px;
-	margin-top: -1070px;
+	margin-top: 380px;
+	position: absolute;
 }
 
 .container-details3 {
 	width: 100%;
-	max-width: 1500px;
+	max-width: 500px;
 	position: relative;
 	margin: auto;
 }
@@ -162,7 +166,6 @@ section{
 	max-width: 500px;
 	position: relative;
 	top: 150px;
-	left: 10px;
 	color:white;
 
 }
@@ -170,13 +173,16 @@ section{
 .details3 h1{
 	font-size: 40px;
 	color: white;
+	left: 500px;
 	font-family: calibri ligth;
 }
 
 .details3 p{
 	font-family: calibri ligth;
 	color: white;
+	text-align: justify;
 	font-size: 20px;
+	position: absolute;
 
 }
 
@@ -186,12 +192,13 @@ section{
 	background: none;
 	border-style: 1px solid white;
 	color: white;
-	margin-left: 150px;
+	margin-top: 380px;
+	position: absolute;
 }
 
 .container-details4 {
 	width: 100%;
-	max-width: 1500px;
+	max-width: 500px;
 	position: relative;
 	margin: auto;
 }
@@ -201,7 +208,6 @@ section{
 	max-width: 500px;
 	position: relative;
 	top: 150px;
-	left: 10px;
 	color:white;
 
 }
@@ -209,20 +215,25 @@ section{
 .details4 h1{
 	font-size: 40px;
 	color: white;
+	left: 500px;
 	font-family: calibri ligth;
 }
 
 .details4 p{
-	font-size: 20px;
-	color: white;
 	font-family: calibri ligth;
+	color: white;
+	text-align: justify;
+	font-size: 20px;
+	position: absolute;
+
 }
 
 .details4 button{
 	padding:10px 20px;
 	font-size: 16px;
 	background: none;
-	border-style: 1px white;
+	border-style: 1px solid white;
 	color: white;
-	margin-left: 150px;
+	margin-top: 380px;
+	position: absolute;
 }
