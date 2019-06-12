@@ -52,27 +52,17 @@
   <div class="opacity">
    
     <?php
-
+    include('admin/conexion.php');
     $id=$_GET['id'];
-
-    $result3 = $enlace->query("SELECT * FROM paquetes WHERE id=$id");
+    $result3 = $enlace->query("SELECT *FROM paquetes WHERE idpaquete=$id");
             if ($result3->num_rows > 0) {
                 while($row3 = $result3->fetch_assoc()) {
-                    echo($row3['detalles']);
+                  echo utf8_encode($row3['descripcion2'].'<br><a href="https://www.facebook.com/ROCATOURS1/" target="_blank" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">'); echo ('¡Viajar!</a>');
                 }
-
               }
 
 
     ?>
-    Ven y conoce Mazátlan con nosotros, disfruta de esta hermosa playa de México.<br>
-  Disfruta de nuestro gran paquete de promoción para 10 personas que incluye:<br>
-  - Hospedaje por 2 dias y 3 noches<br>
-  - Kit viajero <br>
-  - Fotografia profesional <br>
-  - Paseo en yate por la isla de la Piedra
-  Todo esto por solo <b>$10,000 pesos.</b> <br><br>
-  <a href="https://www.facebook.com/ROCATOURS1/" target="_blank" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">¡Viajar!</a>
 
   </div> 
 </div>

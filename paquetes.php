@@ -30,10 +30,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="paquetes.html">Paquetes</a>
+        <a class="nav-link" href="paquetes.php">Paquetes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="destinos.html">Destinos</a>
+        <a class="nav-link" href="destinos.php">Destinos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -58,9 +58,7 @@
                   <p>'.$row3['descripcion'].'</p>
                   <p class="card-text">'.$row3['dias'].'</p>
                   <p>
-                  <a href="'.$row3['url'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
-
-                  <a href="destino.php?id='.$row3['id'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
+                  <a href="destino.php?id='.$row3['idpaquete'].'" class="btn btn-primary btn-lg" style="color: white disabled" tabindex="-1" role="button" aria-disabled="true">Viajar</a>
                   </p>
                   </div>
                   </div>');
