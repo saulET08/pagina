@@ -123,11 +123,13 @@
                   <p>Av Sahuatoba 103b, Bella Vista, 34047 Durango, Dgo.</p>
                   <p>Teléfono: 01 618 267 6632</p>
                   <p>Horario: 3:00 PM - 8:00 PM</p>
+                  <p> Roca Tours® 2019, Derechos Reservados. 
                </div>
             </div>
             <div class="col-md-6 px-4">
                <h6> Acerca de Nosotros</h6>
                <p>Conoce nuestra empresa y nuestra historia.</p>
+               <!--<a href="#" class="btn-footer"> Más información </a><br>-->
                <a href="contacto.html" class="btn-footer"> Contactanos</a>
             </div>
          </div>
@@ -139,9 +141,9 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="index.html"> Inicio</a> </li>
-                        <li> <a href="paquetes.html"> Paquetes</a> </li>
-                        <li> <a href="destinos.html"> Destinos</a> </li>
+                        <li> <a href="index.php"> Inicio</a> </li>
+                        <li> <a href="paquetes.php"> Paquetes</a> </li>
+                        <li> <a href="destinos.php"> Destinos</a> </li>
                         <li> <a href="contacto.html"> Contacto</a> </li>
                      </ul>
                   </div>
@@ -150,8 +152,10 @@
             <div class="col-md-6 ">
                <h6> Redes sociales</h6>
                <div class="social">
-                  <a href="https://www.facebook.com/ROCATOURS1/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-                  <a href="https://www.google.com/maps/uv?hl=es-419&pb=!1s0x869bc9542fa1c6cf:0xfa81a172c4715ac!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4s/maps/place/roca%2Btours%2Bmaps/@24.0304996,-104.6866561,3a,75y,285.69h,90t/data%3D*213m4*211e1*213m2*211smtQcI9aPoxVrfKv1QoXf4g*212e0*214m2*213m1*211s0x869bc9542fa1c6cf:0xfa81a172c4715ac?sa%3DX!5sroca+tours+maps+-+Buscar+con+Google&imagekey=!1e2!2smtQcI9aPoxVrfKv1QoXf4g&sa=X&ved=2ahUKEwj3lpaFqLDhAhUNna0KHfZECYgQpx8wD3oECAwQBg"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/ROCATOURS1/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                  <!--<a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                  <a href="https://web.whatsapp.com/" target="blank"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a>-->
+                  <a href="https://www.google.com/maps/uv?hl=es-419&pb=!1s0x869bc9542fa1c6cf:0xfa81a172c4715ac!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4s/maps/place/roca%2Btours%2Bmaps/@24.0304996,-104.6866561,3a,75y,285.69h,90t/data%3D*213m4*211e1*213m2*211smtQcI9aPoxVrfKv1QoXf4g*212e0*214m2*213m1*211s0x869bc9542fa1c6cf:0xfa81a172c4715ac?sa%3DX!5sroca+tours+maps+-+Buscar+con+Google&imagekey=!1e2!2smtQcI9aPoxVrfKv1QoXf4g&sa=X&ved=2ahUKEwj3lpaFqLDhAhUNna0KHfZECYgQpx8wD3oECAwQBg" target="_blank"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
                </div>
                <!--<p>That's technology limitation of LCD monitors</p>-->
             </div>

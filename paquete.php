@@ -110,9 +110,9 @@ include('admin/conexion.php');
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="index.html"> Inicio</a> </li>
-                        <li> <a href="paquetes.html"> Paquetes</a> </li>
-                        <li> <a href="destinos.html"> Destinos</a> </li>
+                        <li> <a href="index.php"> Inicio</a> </li>
+                        <li> <a href="paquetes.php"> Paquetes</a> </li>
+                        <li> <a href="destinos.php"> Destinos</a> </li>
                         <li> <a href="contacto.html"> Contacto</a> </li>
                      </ul>
                   </div>
